@@ -14,3 +14,31 @@ input {
 button {
   padding: 8px;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 24%;
+}
+
+img {
+  object-fit: contain;
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info-item {
+  font-size: 0.6rem;
+  text-align: center;
+}
