@@ -35,9 +35,6 @@ const loadPhotos = () => {
 
       loadMoreBtn.style.display = 'flex';
 
-      let gallery = new SimpleLightbox('.gallery a');
-      gallery.on('show.simplelightbox');
-
       if (photos.data.hits.length === 0) {
         loadMoreBtn.style.display = 'none';
         Notify.failure(
@@ -55,6 +52,8 @@ const loadPhotos = () => {
         }
       }
       containerGallery.innerHTML = showPhotos(photos);
+      let gallery = new SimpleLightbox('.gallery a');
+      gallery.on('show.simplelightbox');
     })
 
     .catch(err => console.log(err));
